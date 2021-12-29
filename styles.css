@@ -98,6 +98,10 @@ img {
     margin-right: 10px;
 }
 
+.navbar-nav-right li:nth-child(2) {
+    margin: 0 5px;
+}
+
 /* Buttons */
 .btn {
     cursor: pointer;
@@ -116,7 +120,20 @@ img {
     color: #000;
 }
 
+.btn-dark-outline:hover{
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.btn-light-outline {
+    border-color: #fff;
+    color: #fff;
+}
+
 .btn-dark {
     background-color: #000;
     color: #fff;
+}
+
+.btn-dark:hover {
+    background-color: #333;
 }
