@@ -115,6 +115,35 @@ section a {
     margin: 0 auto;
 }
 
+.box-text {
+    max-width: 500px;
+    text-align: center;
+    justify-self: center; /* This makes sure it is centered within its own div */
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.box-text .btn {
+    margin-top: 20px;
+}
+
+.box-f .box-text {
+    max-width: 600px;
+}
+
+/* Box Styles */
+.grid-col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 1fr 1fr couldve been used here. We have to specify after choosing grid layout*/
+    gap: 2rem; /* space between our twoo columns*/
+    align-items: center; /* like flex, this aligns the item vertically (we used this to align our text)*/
+    justify-content: space-between;
+}
+
+.grid-reversed :first-child {
+    order: 2;
+} /* we want the first child in any element with the tag grid reversed, hence our selector
+we then use order to make sure that it lists as the second item in our display */
 /* Buttons */
 .btn {
     cursor: pointer;
@@ -133,7 +162,8 @@ section a {
     color: #000;
 }
 
-.btn-dark-outline:hover{
+.btn-dark-outline:hover,
+.btn-light-outline:hover {
     background-color: rgba(0, 0, 0, 0.06);
 }
 
