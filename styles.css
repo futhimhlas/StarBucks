@@ -275,6 +275,25 @@ we then use order to make sure that it lists as the second item in our display *
     padding: 40px 0;
 }
 
+/* Hamburger Menu Icon */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative; /* Top, bot and mid lines will positioned inside this absolutely */
+    background: none; /* buttons have these two options by default */
+    border: none;
+    z-index: 10;
+    transition: all 0,25s; /* This will make the transition smooth */
+}
+
+.hamburger-top,
+.hamburger-mid,
+.hamburger-bot {
+    
+}
+
+
 /* Media Queries */
 @media(max-width: 960px){
     .text-xl{
