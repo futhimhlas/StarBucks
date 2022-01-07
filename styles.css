@@ -285,15 +285,41 @@ we then use order to make sure that it lists as the second item in our display *
     border: none;
     z-index: 10;
     transition: all 0,25s; /* This will make the transition smooth */
+    display: none;
 }
 
 .hamburger-top,
 .hamburger-mid,
 .hamburger-bot {
-    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: 0.5s; /* This causes all the lines to be stacked on top of each other*/
 }
 
+.hamburger-mid {
+    transform: translateY(7px); /* Here wwe specify that we want to move mid along the y axis (Down)*/
+}
 
+.hamburger-bot {
+    transform: translateY(14px); /* Here wwe specify that we want to move mid along the y axis (Down)*/
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateX(6px) translateY(6px);
+}
+
+.open .hamburger-mid {
+    display: none;
+}
+
+.open .hamburger-bot {
+    transform: rotate(-45deg) translateX(-6px) translateY(6px);
+}
 /* Media Queries */
 @media(max-width: 960px){
     .text-xl{
@@ -330,6 +356,10 @@ we then use order to make sure that it lists as the second item in our display *
 
     .footer {
         text-align: center;
+    }
+
+    .hamburger{
+        display: block;
     }
 }
 
